@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={`${roboto.variable} font-sans`}>
-      <body>{children}</body>
+      <body className="bg-charcoal flex justify-center">{children}</body>
     </html>
   );
 };
