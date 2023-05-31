@@ -25,7 +25,7 @@ const Home = () => {
             alt="background"
           />
         </picture>
-        <section className="px-8 text-slate md:px-10">
+        <section className="px-8 text-slate md:px-10 md:my-auto">
           <h1 className="text-[2.5rem] md:text-[2.8rem] lg:text-[3.4rem] font-bold mt-6">
             Stay Updated!
           </h1>
