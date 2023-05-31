@@ -2,7 +2,7 @@ import Form from "@/components/Form";
 
 const Home = () => {
   return (
-    <main className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-full max-w-[375px] md:max-w-[1000px] 2xl:scale-125 shadow-2xl">
+    <main className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-full sm:max-w-[375px] md:max-w-[1000px] 2xl:scale-125 shadow-2xl">
       <article className="bg-white sm:rounded-2xl md:rounded-3xl overflow-hidden max-h-screen grid md:grid-cols-2 md:p-8 md:gap-8">
         <img
           className="w-full md:h-full object-cover md:rounded-2xl md:order-1"
