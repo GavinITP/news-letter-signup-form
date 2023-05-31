@@ -18,7 +18,7 @@ const schema = z.object({
 type Email = z.infer<typeof schema>;
 
 const Form = ({ submitDataFunc }: { submitDataFunc: () => void }) => {
-  const { setEmail } = useContext(EmailContext);
+  const { setEmail } = useContext<any>(EmailContext);
 
   const submitData = (data: Email) => {
     submitDataFunc();
