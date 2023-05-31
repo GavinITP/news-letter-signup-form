@@ -1,7 +1,14 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+
 const Success = () => {
   const email = "xxxxxx444444@gmail.com";
+
+  const router = useRouter();
+  const navigateToHomePage = () => {
+    router.push("/");
+  };
 
   return (
     <main className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-full sm:max-w-[375px] md:max-w-[1000px] 2xl:scale-125 shadow-2xl">
