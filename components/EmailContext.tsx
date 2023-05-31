@@ -1,20 +1,22 @@
-import React, { createContext, useState } from "react";
+"use client";
 
-interface MyContextProps {
+import { createContext, useState } from "react";
+
+export interface EmailContextProps {
   email: string;
-  setEmail: React.Dispatch<React.SetStateAction<string>>;
+  setEmail: (email: React.SetStateAction<string>) => void;
 }
 
-export const MyContext = createContext<MyContextProps | null>(null);
+export const EmailContext = createContext<EmailContextProps | null>(null);
 
-export const MyContextProvider: React.FC<{ children: React.ReactNode }> = ({
+export const EmailContextProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [email, setEmail] = useState("");
 
   return (
-    <MyContext.Provider value={{ email, setEmail }}>
+    <EmailContext.Provider value={{ email, setEmail }}>
       {children}
-    </MyContext.Provider>
+    </EmailContext.Provider>
   );
 };

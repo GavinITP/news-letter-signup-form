@@ -2,6 +2,7 @@ import { Metadata } from "next";
 
 import "styles/globals.css";
 import { Roboto } from "next/font/google";
+import { EmailContextProvider } from "@/components/EmailContext";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -19,7 +20,9 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={`${roboto.variable} font-sans`}>
-      <body className="bg-charcoal">{children}</body>
+      <body className="bg-charcoal">
+        <EmailContextProvider>{children}</EmailContextProvider>
+      </body>
     </html>
   );
 };

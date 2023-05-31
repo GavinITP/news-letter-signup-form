@@ -2,8 +2,11 @@
 
 import { useRouter } from "next/navigation";
 
+import { useContext } from "react";
+import { EmailContext } from "../../components/EmailContext";
+
 const Success = () => {
-  const email = "xxxxxx444444@gmail.com";
+  const { email } = useContext(EmailContext);
 
   const router = useRouter();
   const navigateToHomePage = () => {

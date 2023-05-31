@@ -4,6 +4,9 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
+import { useContext } from "react";
+import { EmailContext } from "../components/EmailContext";
+
 const schema = z.object({
   email: z
     .string()
@@ -15,6 +18,13 @@ const schema = z.object({
 type Email = z.infer<typeof schema>;
 
 const Form = ({ submitDataFunc }: { submitDataFunc: () => void }) => {
+  const { setEmail } = useContext(EmailContext);
+
+  const submitData = (data: Email) => {
+    submitDataFunc();
+    setEmail(data.email);
+  };
+
   const {
     register,
     handleSubmit,
@@ -24,7 +34,7 @@ const Form = ({ submitDataFunc }: { submitDataFunc: () => void }) => {
   });
 
   return (
-    <form className="my-12" onSubmit={handleSubmit(submitDataFunc)}>
+    <form className="my-12" onSubmit={handleSubmit(submitData)}>
       <div className="flex justify-between">
         <label htmlFor="email" className="block mb-2 text-xs font-bold">
           Email address
