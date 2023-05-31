@@ -1,11 +1,14 @@
-import { createContext, useState } from "react";
+import React, { createContext, useState } from "react";
 
-export const MyContext = createContext(null);
+interface MyContextProps {
+  email: string;
+  setEmail: React.Dispatch<React.SetStateAction<string>>;
+}
 
-export const MyContextProvider = ({
+export const MyContext = createContext<MyContextProps | null>(null);
+
+export const MyContextProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
-}: {
-  children: React.ReactNode;
 }) => {
   const [email, setEmail] = useState("");
 
