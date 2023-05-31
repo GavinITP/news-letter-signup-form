@@ -12,10 +12,9 @@ const schema = z.object({
     .min(3)
     .max(30),
 });
-
 type Email = z.infer<typeof schema>;
 
-const Form = () => {
+const Form = ({ submitDataFunc }: { submitDataFunc: () => void }) => {
   const {
     register,
     handleSubmit,
@@ -24,12 +23,8 @@ const Form = () => {
     resolver: zodResolver(schema),
   });
 
-  const submitCorrectedData = (data: Email) => {
-    console.log("correct", data);
-  };
-
   return (
-    <form className="my-12" onSubmit={handleSubmit(submitCorrectedData)}>
+    <form className="my-12" onSubmit={handleSubmit(submitDataFunc)}>
       <div className="flex justify-between">
         <label htmlFor="email" className="block mb-2 text-xs font-bold">
           Email address
@@ -59,7 +54,7 @@ const Form = () => {
 
       <button
         type="submit"
-        className="bg-slate text-white text-center font-bold w-full px-6 py-4 rounded-lg my-4 hover:bg-violet-950"
+        className="bg-slate text-white text-center font-bold w-full px-6 py-4 rounded-lg my-4 hover:bg-gradient-to-r from-rose-500 to-primary hover:shadow-xl"
       >
         Subscribe to monthly newsletter
       </button>
