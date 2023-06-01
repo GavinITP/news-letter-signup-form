@@ -5,8 +5,6 @@ import { useRouter } from "next/navigation";
 import { useContext } from "react";
 import { EmailContext } from "../../components/EmailContext";
 
-import { EmailContextProps } from "../../components/EmailContext";
-
 const Success = () => {
   const { email } = useContext<any>(EmailContext);
 

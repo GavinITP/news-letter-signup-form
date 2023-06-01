@@ -11,13 +11,13 @@ const Home = () => {
   };
 
   return (
-    <main className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-full sm:max-w-[375px] md:max-w-[950px] 2xl:scale-125 shadow-2xl">
-      <article className="bg-white sm:rounded-2xl md:rounded-3xl overflow-hidden min-h-screen sm:min-h-min grid md:grid-cols-2 md:p-8 md:gap-4">
-        <picture>
+    <main className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-full min-[400px]:max-w-[375px] min-[860px]:max-w-[850px] 2xl:scale-125 shadow-2xl">
+      <article className="bg-white sm:rounded-2xl min-[860px]:rounded-3xl overflow-hidden min-h-screen sm:min-h-min grid min-[860px]:grid-cols-2 min-[860px]:p-8 min-[860px]:gap-4">
+        <picture className="min-[860px]:order-1">
           <source
-            media="(min-width: 768px)"
+            media="(min-width: 860px)"
             srcSet="illustration-sign-up-desktop.svg"
-            className="md:rounded-2xl md:order-1"
+            className="rounded-2xl"
           />
           <img
             className="w-full"
@@ -25,8 +25,8 @@ const Home = () => {
             alt="background"
           />
         </picture>
-        <section className="px-8 text-slate md:px-10 md:my-auto">
-          <h1 className="text-[2.5rem] md:text-[2.8rem] lg:text-[3.4rem] font-bold mt-6">
+        <section className="px-8 text-slate min-[860px]:px-10 min-[860px]:my-auto">
+          <h1 className="text-[2.5rem] min-[860px]:text-[2.8rem] font-bold mt-6">
             Stay Updated!
           </h1>
           <p className="my-4 text-base">
