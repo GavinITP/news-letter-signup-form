@@ -36,19 +36,19 @@ const Home = () => {
           <ul>
             <li className="my-2 flex flex-row items-between">
               <div className="pr-4">
-                <img className="inline" src="icon-list.svg" />
+                <img className="inline" src="icon-list.svg" alt="list item" />
               </div>
               <span>Product discovery and building what matters</span>
             </li>
             <li className="my-2 flex flex-row items-between">
               <div className="pr-4">
-                <img className="inline" src="icon-list.svg" />
+                <img className="inline" src="icon-list.svg" alt="list item" />
               </div>
               <span>Measuring to ensure updates are a success</span>
             </li>
             <li className="my-2 flex flex-row items-between">
               <div className="pr-4">
-                <img className="inline" src="icon-list.svg" />
+                <img className="inline" src="icon-list.svg" alt="list item" />
               </div>
               <span>And much more!</span>
             </li>
