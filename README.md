@@ -120,5 +120,5 @@ export const EmailContextProvider: React.FC<{ children: React.ReactNode }> = ({
 
 ## Author
 
-- Frontend Mentor - [@GavinITP](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@GavinITP](https://www.frontendmentor.io/profile/GavinITP)
 - LinkedIn - [@Ittipat Yodprasit](https://www.linkedin.com/in/ittipat-yodprasit/)
